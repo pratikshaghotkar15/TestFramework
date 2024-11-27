@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from your Git repository
-                git branch: 'main', url: 'https://github.com/your-repository.git'
+                git branch: 'main', url: 'https://github.com/pratikshaghotkar15/TestFramework'
             }
         }
 
