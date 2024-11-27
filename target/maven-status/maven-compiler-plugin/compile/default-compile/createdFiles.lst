@@ -1,0 +1,3 @@
+com\frameworkfortest\Testframework\LoginPage.class
+com\frameworkfortest\Testframework\resources\ExtentReportClass.class
+com\frameworkfortest\Testframework\TablePage.class

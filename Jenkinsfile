@@ -16,18 +16,23 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Run Maven to download dependencies
-                maven 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
 
         stage('Run Tests') {
             steps {
                 // Run the Cucumber tests
-                maven 'mvn test'
+                sh 'mvn test'
             }
         }
 
-        
+        stage('Publish Test Results') {
+            steps {
+                // Publish JUnit test results
+                junit '**/target/surefire-reports/*.xml'
+            }
+        }
     }
 
     post {
