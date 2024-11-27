@@ -16,14 +16,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Run Maven to download dependencies
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
         stage('Run Tests') {
             steps {
                 // Run the Cucumber tests
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
